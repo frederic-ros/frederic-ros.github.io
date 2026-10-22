@@ -1,0 +1,193 @@
+/* Site de Frédéric Ros — feuille de style unique.
+   Couleurs : un papier froid, une encre ardoise, et les trois couleurs des groupes
+   du nuage de points (le jeu d'exemple de ClusterLab), réutilisées avec parcimonie. */
+
+:root {
+  --papier: #f4f6f3;
+  --encre: #1e2a32;
+  --gris: #56656d;
+  --filet: #d3dbd6;
+  --g0: #1e6b73;   /* sarcelle : liens et premier groupe */
+  --g1: #b5832a;   /* ocre */
+  --g2: #74507a;   /* prune */
+  --g3: #3d5f8f;   /* bleu ardoise */
+  --g4: #a4553b;   /* brique */
+  --fond-carte: #eaefeb;
+  /* Polices déjà installées sur les machines : rien n'est chargé depuis un tiers. */
+  --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --papier: #141b1f; --encre: #e3e9e6; --gris: #9fb0b6; --filet: #2c383e;
+    --g0: #5fb3bb; --g1: #d9aa55; --g2: #b48bbb; --g3: #8eaedb; --g4: #df8f72; --fond-carte: #1b2428;
+  }
+}
+:root[data-theme="dark"] {
+  --papier: #141b1f; --encre: #e3e9e6; --gris: #9fb0b6; --filet: #2c383e;
+  --g0: #5fb3bb; --g1: #d9aa55; --g2: #b48bbb; --g3: #8eaedb; --g4: #df8f72; --fond-carte: #1b2428;
+}
+
+/* Une seule langue visible à la fois (le reste est masqué, pas supprimé). */
+html[data-lang="fr"] .en, html[data-lang="en"] .fr { display: none !important; }
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--papier); color: var(--encre);
+  font-family: var(--serif); font-size: 1.0625rem; line-height: 1.65;
+  font-optical-sizing: auto;
+}
+a { color: var(--g0); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--g0); outline-offset: 3px; border-radius: 2px; }
+
+/* --- En-tête ------------------------------------------------------------ */
+.entete {
+  position: sticky; top: 0; z-index: 10; background: var(--papier);
+  border-bottom: 1px solid var(--filet);
+}
+.entete-int {
+  max-width: 68rem; margin: 0 auto; padding: 0.7rem 1rem;
+  display: flex; align-items: center; gap: 1.25rem; font-family: var(--sans);
+}
+.marque { font-family: var(--serif); font-weight: 600; color: var(--encre); text-decoration: none; margin-right: auto; }
+.nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
+.nav a { color: var(--gris); text-decoration: none; font-size: 0.95rem; }
+.nav a:hover { color: var(--encre); }
+.langue {
+  font: 600 0.85rem var(--sans); color: var(--encre); background: transparent;
+  border: 1px solid var(--filet); border-radius: 999px; padding: 0.25rem 0.75rem; cursor: pointer;
+}
+.langue:hover { border-color: var(--gris); }
+@media (max-width: 960px) { .nav { display: none; } }
+
+/* --- Mise en page : une marge de titres, une colonne de texte ----------- */
+main { max-width: 68rem; margin: 0 auto; padding: 0 1rem 4rem; }
+.section {
+  display: grid; grid-template-columns: 13rem minmax(0, 1fr); gap: 2.5rem;
+  padding: 3rem 0; border-top: 1px solid var(--filet);
+}
+.section > h2 {
+  margin: 0; font-size: 1.15rem; font-weight: 600; line-height: 1.3;
+  position: sticky; top: 4.5rem; align-self: start;
+}
+.texte { max-width: 40rem; }
+.texte > :first-child { margin-top: 0; }
+@media (max-width: 760px) {
+  .section { grid-template-columns: 1fr; gap: 1rem; padding: 2.25rem 0; }
+  .section > h2 { position: static; }
+}
+
+/* --- Ouverture ------------------------------------------------------------ */
+.ouverture {
+  display: grid; grid-template-columns: minmax(0, 1fr) 20rem; gap: 3rem;
+  align-items: center; padding: 3.5rem 0 3rem;
+}
+.ouverture h1 {
+  font-size: clamp(2.4rem, 6vw, 3.6rem); line-height: 1.05; margin: 0 0 0.6rem;
+  font-weight: 500; letter-spacing: -0.015em;
+}
+.fonctions { font-family: var(--sans); color: var(--gris); margin: 0 0 1.4rem; font-size: 1rem; }
+.presentation { font-size: 1.15rem; max-width: 36rem; margin: 0; }
+figure.nuage { margin: 0; }
+figure.nuage svg { width: 100%; height: auto; display: block; }
+figure.nuage figcaption { font-family: var(--sans); font-size: 0.85rem; color: var(--gris); margin-top: 0.4rem; }
+@media (max-width: 760px) {
+  .ouverture { grid-template-columns: 1fr; gap: 1.5rem; padding-top: 2rem; }
+  figure.nuage { max-width: 16rem; }
+}
+
+/* Le nuage : les points apparaissent gris, puis prennent la couleur de leur groupe. */
+.p { fill: var(--gris); opacity: 0.85; }
+.p.g0 { animation: colorie0 0.9s ease-out forwards; }
+.p.g1 { animation: colorie1 0.9s ease-out forwards; }
+.p.g2 { animation: colorie2 0.9s ease-out forwards; }
+.p { animation-delay: calc(400ms + var(--i) * 18ms) !important; }
+.c { fill: none; stroke-width: 1.5; stroke-dasharray: 3 3; opacity: 0; animation: centre 0.6s ease-out 1.6s forwards; }
+.c.g0 { stroke: var(--g0); } .c.g1 { stroke: var(--g1); } .c.g2 { stroke: var(--g2); }
+@keyframes colorie0 { to { fill: var(--g0); } }
+@keyframes colorie1 { to { fill: var(--g1); } }
+@keyframes colorie2 { to { fill: var(--g2); } }
+@keyframes centre { to { opacity: 0.9; } }
+@media (prefers-reduced-motion: reduce) {
+  .p, .c { animation: none !important; }
+  .p.g0 { fill: var(--g0); } .p.g1 { fill: var(--g1); } .p.g2 { fill: var(--g2); }
+  .c { opacity: 0.9; }
+}
+
+/* --- Listes de travaux ------------------------------------------------------ */
+.liste { list-style: none; margin: 0; padding: 0; }
+.liste > li { padding: 1.1rem 0; border-bottom: 1px solid var(--filet); }
+.liste > li:first-child { padding-top: 0; }
+.liste > li:last-child { border-bottom: 0; }
+.liste h3 { font-size: 1.1rem; font-weight: 600; margin: 0 0 0.25rem; line-height: 1.35; }
+.liste p { margin: 0.25rem 0 0; }
+.meta { font-family: var(--sans); font-size: 0.9rem; color: var(--gris); }
+.liens-ligne { font-family: var(--sans); font-size: 0.95rem; margin-top: 0.45rem; display: flex; gap: 1.1rem; flex-wrap: wrap; }
+h3.sous-titre { font-size: 1rem; font-weight: 600; margin: 2.2rem 0 0.8rem; color: var(--gris); font-family: var(--sans); }
+
+/* Le livre mis en avant : un encadré discret, pas une vitrine. */
+.livre-principal { background: var(--fond-carte); border-left: 3px solid var(--g0); padding: 1.25rem 1.4rem; margin-bottom: 1.5rem; }
+.livre-principal h3 { font-size: 1.3rem; margin: 0 0 0.2rem; }
+.livre-principal .sous { font-style: italic; margin: 0 0 0.8rem; }
+
+/* --- Contact et pied de page ------------------------------------------------ */
+.reseaux { list-style: none; padding: 0; margin: 1rem 0 0; font-family: var(--sans); display: grid; gap: 0.35rem; }
+.pied { max-width: 68rem; margin: 0 auto; padding: 1.5rem 1rem 2.5rem; border-top: 1px solid var(--filet);
+  font: 0.85rem var(--sans); color: var(--gris); }
+
+/* --- Page du companion ------------------------------------------------------ */
+.page { max-width: 44rem; margin: 0 auto; padding: 2.5rem 1rem 4rem; }
+.page h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.12; font-weight: 500; margin: 0 0 0.5rem; }
+.page h2 { font-size: 1.2rem; margin: 2.4rem 0 0.6rem; }
+.etapes { padding-left: 1.3rem; }
+.etapes li { margin: 0.5rem 0; }
+.note { font-family: var(--sans); font-size: 0.95rem; color: var(--gris); border-top: 1px solid var(--filet); padding-top: 1rem; margin-top: 2.5rem; }
+
+/* --- Sommaire : cinq tuiles, une couleur par rubrique ------------------------ */
+.t-recherche { --accent: var(--g3); }
+.t-livres { --accent: var(--g0); }
+.t-logiciels { --accent: var(--g2); }
+.t-vulgarisation { --accent: var(--g1); }
+.t-medias { --accent: var(--g4); }
+.t-contact { --accent: var(--gris); }
+
+.sommaire {
+  display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0.9rem;
+  padding: 0 0 3rem;
+}
+.tuile {
+  display: flex; flex-direction: column; gap: 0.2rem; text-decoration: none; color: var(--encre);
+  background: var(--fond-carte); border-top: 3px solid var(--accent);
+  padding: 1rem 1rem 1.1rem; border-radius: 0 0 6px 6px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.tuile:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+.tuile .chiffre { font-size: 2rem; line-height: 1.1; font-weight: 500; color: var(--accent); }
+.tuile .intitule { font-family: var(--sans); font-weight: 600; font-size: 0.98rem; line-height: 1.3; }
+.tuile .detail { font-family: var(--sans); font-size: 0.82rem; color: var(--gris); line-height: 1.35; }
+@media (max-width: 960px) { .sommaire { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .sommaire { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (prefers-reduced-motion: reduce) { .tuile { transition: none; } .tuile:hover { transform: none; } }
+
+/* Chaque rubrique reprend la couleur de sa tuile. */
+.section > h2 { padding-left: 0.75rem; border-left: 3px solid var(--accent, var(--filet)); }
+.section { scroll-margin-top: 3.5rem; }
+
+/* Chiffres clés de la recherche */
+.chiffres { list-style: none; padding: 0; margin: 1.4rem 0; display: flex; flex-wrap: wrap; gap: 0.8rem 2.2rem; font-family: var(--sans); color: var(--gris); font-size: 0.92rem; }
+.chiffres strong { display: block; font-family: var(--serif); font-size: 1.7rem; font-weight: 500; color: var(--accent); line-height: 1.1; }
+.encart { background: var(--fond-carte); border-left: 3px solid var(--accent); padding: 0.9rem 1.1rem; }
+
+/* Grilles de cartes : logiciels, médias */
+.grille { list-style: none; padding: 0; margin: 1.2rem 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 0.9rem; }
+.grille > li { background: var(--fond-carte); padding: 1rem 1.1rem; border-radius: 6px; border-left: 3px solid var(--accent); }
+.grille h3 { font-size: 1.02rem; font-weight: 600; margin: 0 0 0.35rem; line-height: 1.35; }
+.grille p { margin: 0.2rem 0 0; font-size: 0.95rem; }
+.grille .support { font-family: var(--sans); font-size: 0.8rem; color: var(--gris); text-transform: uppercase; letter-spacing: 0.04em; margin: 0 0 0.35rem; }
+
+/* Liens de profil sous la présentation */
+.profils { list-style: none; padding: 0; margin: 1.5rem 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem; font-family: var(--sans); font-size: 0.9rem; }
+.profils a { display: inline-block; text-decoration: none; color: var(--encre); border: 1px solid var(--filet); border-radius: 999px; padding: 0.3rem 0.85rem; background: var(--fond-carte); }
+.profils a:hover { border-color: var(--g0); color: var(--g0); }
