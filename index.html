@@ -3,104 +3,342 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Companion — De l’algorithme à la production</title>
-<meta name="titre-fr" content="Companion du livre « De l’algorithme à la production » — Frédéric Ros">
-<meta name="titre-en" content="Companion to the book “De l’algorithme à la production” — Frédéric Ros">
-<meta name="description" content="Accéder au companion du livre « De l'algorithme à la production » : guides, labs, codes et corrigés, inclus avec le livre broché ou Kindle.">
-<link rel="icon" href="../assets/icone.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../assets/style.css">
-<script src="../assets/site.js"></script>
+<title>Frédéric Ros</title>
+<meta name="titre-fr" content="Frédéric Ros — intelligence artificielle, recherche et vulgarisation">
+<meta name="titre-en" content="Frédéric Ros — artificial intelligence, research and outreach">
+<meta name="description" content="Frédéric Ros, professeur des universités (Université d'Orléans) et directeur de la Technopole Orléans Val de Loire : livres, articles de vulgarisation, recherche en intelligence artificielle.">
+<link rel="icon" href="assets/icone.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js"></script>
 </head>
 <body>
 
 <header class="entete">
   <div class="entete-int">
-    <a class="marque" href="../">Frédéric Ros</a>
+    <a class="marque" href="./">Frédéric Ros</a>
     <nav class="nav" aria-label="Sections">
-      <a href="../#recherche"><span class="fr">Recherche</span><span class="en">Research</span></a>
-      <a href="../#livres"><span class="fr">Livres</span><span class="en">Books</span></a>
-      <a href="../#logiciels"><span class="fr">Logiciels</span><span class="en">Software</span></a>
-      <a href="../#vulgarisation"><span class="fr">Vulgarisation</span><span class="en">Outreach</span></a>
-      <a href="../#medias"><span class="fr">Médias</span><span class="en">Media</span></a>
-      <a href="../#contact">Contact</a>
+      <a href="#recherche"><span class="fr">Recherche</span><span class="en">Research</span></a>
+      <a href="#livres"><span class="fr">Livres</span><span class="en">Books</span></a>
+      <a href="#logiciels"><span class="fr">Logiciels</span><span class="en">Software</span></a>
+      <a href="#vulgarisation"><span class="fr">Vulgarisation</span><span class="en">Outreach</span></a>
+      <a href="#medias"><span class="fr">Médias</span><span class="en">Media</span></a>
+      <a href="#contact">Contact</a>
     </nav>
     <button class="langue" type="button">English</button>
   </div>
 </header>
 
-<main class="page">
-  <h1><span class="fr">Le companion du livre</span><span class="en">The book’s companion</span></h1>
-  <p class="meta"><em>De l’algorithme à la production</em> — Frédéric Ros</p>
+<main>
 
-  <p class="fr">Le livre suit une application, ClusterLab, du premier script jusqu’à la
-    production. Le companion permet de refaire ce chemin soi-même, sur sa machine.</p>
-  <p class="en">The book follows an application, ClusterLab, from its first script to
-    production. The companion lets you walk the same path yourself, on your own machine.
-    The companion is in French.</p>
+  <!-- ===== Ouverture ===================================================== -->
+  <section class="ouverture" aria-label="Présentation">
+    <div>
+      <h1>Frédéric Ros</h1>
+      <p class="fonctions fr">Professeur des universités, Université d’Orléans.
+        Directeur de la Technopole Orléans Val de Loire.</p>
+      <p class="fonctions en">Full Professor, University of Orléans.
+        Director of the Technopole Orléans Val de Loire.</p>
 
-  <h2><span class="fr">Ce qu’il contient</span><span class="en">What it contains</span></h2>
-  <ul>
-    <li class="fr">le code de chaque chapitre, prêt à lancer, et ses tests ;</li>
-    <li class="en">the code for each chapter, ready to run, with its tests;</li>
-    <li class="fr">81 labs, trois par chapitre, et un super-lab qui rejoue toute l’histoire de ClusterLab ;</li>
-    <li class="en">81 labs, three per chapter, and a final lab that replays ClusterLab’s whole story;</li>
-    <li class="fr">le livret « Guides des labs » : étapes guidées, questions et éléments de réponse ;</li>
-    <li class="en">the lab guide booklet: guided steps, questions and suggested answers;</li>
-    <li class="fr">les corrigés des exercices, les TP guidés et un carnet de bord d’une page par chapitre.</li>
-    <li class="en">solutions to the exercises, guided practicals and a one-page summary per chapter.</li>
-  </ul>
-  <p class="fr">Une partie est en accès libre sur le
-    <a href="https://github.com/frederic-ros/clusterlab-companion">dépôt public</a> : vous
-    pouvez l’essayer avant d’acheter le livre.</p>
-  <p class="en">Part of it is freely available in the
-    <a href="https://github.com/frederic-ros/clusterlab-companion">public repository</a>:
-    you can try it before buying the book.</p>
+      <p class="presentation fr">Trente ans d’intelligence artificielle, des deux côtés :
+        la vision industrielle et l’apprentissage automatique en entreprise
+        (Schlumberger, Gemalto), puis la recherche, l’enseignement et le transfert
+        à l’université. J’écris aussi pour rendre ces sujets accessibles à ceux qui
+        ne les pratiquent pas.</p>
+      <p class="presentation en">Thirty years of artificial intelligence, on both sides:
+        industrial vision and machine learning in industry (Schlumberger, Gemalto),
+        then research, teaching and technology transfer at the university. I also
+        write to make these topics accessible to people who do not practise them.</p>
+      <ul class="profils">
+        <li><a href="https://www.linkedin.com/in/fr%C3%A9d%C3%A9ric-ros-6837826/">LinkedIn</a></li>
+        <li><a href="https://www.researchgate.net/profile/Frederic-Ros">ResearchGate</a></li>
+        <li><a href="https://www.sciencedirect.com/journal/expert-systems-with-applications"><span class="fr">Expert Systems with Applications · éditeur associé</span><span class="en">Expert Systems with Applications · Associate Editor</span></a></li>
+      </ul>
+    </div>
 
-  <h2><span class="fr">Comment y accéder</span><span class="en">How to get access</span></h2>
-  <p class="fr">L’accès au companion complet est inclus dans le prix du livre, broché ou
-    Kindle. Il n’est pas automatique : il se fait par une invitation à un dépôt GitHub privé.</p>
-  <p class="en">Access to the full companion is included in the price of the book,
-    paperback or Kindle. It is not automatic: you receive an invitation to a private
-    GitHub repository.</p>
-  <ol class="etapes">
-    <li class="fr">Si vous n’en avez pas, créez un compte gratuit sur <a href="https://github.com/signup">github.com</a>.</li>
-    <li class="en">If you do not have one, create a free account on <a href="https://github.com/signup">github.com</a>.</li>
-    <li class="fr">Écrivez à <a href="mailto:contact@frederic-ros.com?subject=Acc%C3%A8s%20au%20companion%20ClusterLab">contact@frederic-ros.com</a>
-      en indiquant votre identifiant GitHub, et joignez votre justificatif d’achat : une
-      capture de la commande Amazon où figurent le titre et la date suffit. Masquez le reste
-      (adresse, moyen de paiement).</li>
-    <li class="en">Write to <a href="mailto:contact@frederic-ros.com?subject=Companion%20access%20ClusterLab">contact@frederic-ros.com</a>
-      with your GitHub username, and attach your proof of purchase: a screenshot of the
-      Amazon order showing the title and date is enough. Hide everything else (address,
-      payment details).</li>
-    <li class="fr">Vous recevez une invitation de GitHub par e-mail, en général sous quelques
-      jours. Acceptez-la dans la semaine : passé ce délai, elle expire, et il suffit de me
-      réécrire.</li>
-    <li class="en">You will receive an invitation from GitHub by e-mail, usually within a few
-      days. Accept it within a week: after that it expires, and you can simply write again.</li>
-  </ol>
-  <p class="fr">Livre reçu en cadeau, ou pas de justificatif à portée de main ? Écrivez quand
-    même, en le précisant : je trouverai une solution.</p>
-  <p class="en">Received the book as a gift, or no proof of purchase at hand? Write anyway
-    and say so: I will find a way.</p>
+    <figure class="nuage">
+      <svg viewBox="0 0 320 320" role="img" aria-labelledby="nuage-titre">
+        <title id="nuage-titre">Quarante-cinq points regroupés en trois groupes par un algorithme de clustering</title>
+        <circle class="p g0" cx="27.7" cy="240.5" r="5" style="--i:0"/>
+        <circle class="p g0" cx="72.1" cy="282.2" r="5" style="--i:1"/>
+        <circle class="p g0" cx="53.2" cy="268.5" r="5" style="--i:2"/>
+        <circle class="p g0" cx="64.2" cy="244.7" r="5" style="--i:3"/>
+        <circle class="p g0" cx="24.8" cy="298.2" r="5" style="--i:4"/>
+        <circle class="p g0" cx="77.2" cy="269.7" r="5" style="--i:5"/>
+        <circle class="p g0" cx="72.0" cy="300.0" r="5" style="--i:6"/>
+        <circle class="p g0" cx="49.6" cy="249.4" r="5" style="--i:7"/>
+        <circle class="p g0" cx="34.4" cy="233.6" r="5" style="--i:8"/>
+        <circle class="p g0" cx="81.8" cy="298.0" r="5" style="--i:9"/>
+        <circle class="p g0" cx="20.0" cy="262.1" r="5" style="--i:10"/>
+        <circle class="p g0" cx="84.5" cy="273.3" r="5" style="--i:11"/>
+        <circle class="p g0" cx="33.5" cy="270.5" r="5" style="--i:12"/>
+        <circle class="p g0" cx="20.3" cy="284.6" r="5" style="--i:13"/>
+        <circle class="p g0" cx="49.1" cy="265.3" r="5" style="--i:14"/>
+        <circle class="p g2" cx="246.4" cy="72.8" r="5" style="--i:15"/>
+        <circle class="p g2" cx="245.4" cy="56.8" r="5" style="--i:16"/>
+        <circle class="p g2" cx="250.4" cy="87.6" r="5" style="--i:17"/>
+        <circle class="p g2" cx="289.1" cy="49.9" r="5" style="--i:18"/>
+        <circle class="p g2" cx="275.3" cy="76.0" r="5" style="--i:19"/>
+        <circle class="p g2" cx="300.0" cy="28.6" r="5" style="--i:20"/>
+        <circle class="p g2" cx="238.5" cy="65.7" r="5" style="--i:21"/>
+        <circle class="p g2" cx="280.9" cy="39.1" r="5" style="--i:22"/>
+        <circle class="p g2" cx="296.0" cy="59.4" r="5" style="--i:23"/>
+        <circle class="p g2" cx="288.5" cy="41.9" r="5" style="--i:24"/>
+        <circle class="p g2" cx="251.4" cy="47.8" r="5" style="--i:25"/>
+        <circle class="p g2" cx="292.2" cy="29.6" r="5" style="--i:26"/>
+        <circle class="p g2" cx="265.6" cy="47.7" r="5" style="--i:27"/>
+        <circle class="p g2" cx="232.4" cy="72.0" r="5" style="--i:28"/>
+        <circle class="p g2" cx="286.2" cy="59.9" r="5" style="--i:29"/>
+        <circle class="p g1" cx="30.4" cy="50.5" r="5" style="--i:30"/>
+        <circle class="p g1" cx="67.8" cy="41.6" r="5" style="--i:31"/>
+        <circle class="p g1" cx="44.7" cy="58.2" r="5" style="--i:32"/>
+        <circle class="p g1" cx="54.1" cy="34.3" r="5" style="--i:33"/>
+        <circle class="p g1" cx="55.0" cy="61.4" r="5" style="--i:34"/>
+        <circle class="p g1" cx="52.8" cy="87.0" r="5" style="--i:35"/>
+        <circle class="p g1" cx="21.3" cy="39.6" r="5" style="--i:36"/>
+        <circle class="p g1" cx="87.6" cy="47.4" r="5" style="--i:37"/>
+        <circle class="p g1" cx="46.0" cy="77.1" r="5" style="--i:38"/>
+        <circle class="p g1" cx="53.7" cy="20.0" r="5" style="--i:39"/>
+        <circle class="p g1" cx="72.6" cy="51.1" r="5" style="--i:40"/>
+        <circle class="p g1" cx="78.9" cy="72.8" r="5" style="--i:41"/>
+        <circle class="p g1" cx="54.5" cy="22.1" r="5" style="--i:42"/>
+        <circle class="p g1" cx="59.0" cy="56.8" r="5" style="--i:43"/>
+        <circle class="p g1" cx="37.2" cy="50.5" r="5" style="--i:44"/>
+        <circle class="c g0" cx="51.0" cy="269.4" r="11"/>
+        <circle class="c g1" cx="54.4" cy="51.4" r="11"/>
+        <circle class="c g2" cx="269.2" cy="55.6" r="11"/>
+      </svg>
+      <figcaption class="fr">Quarante-cinq points, trois groupes : le jeu d’exemple du livre, regroupé par k-means.</figcaption>
+      <figcaption class="en">Forty-five points, three clusters: the book’s sample dataset, grouped by k-means.</figcaption>
+    </figure>
+  </section>
 
-  <h2><span class="fr">Ce que vous pouvez en faire</span><span class="en">What you may do with it</span></h2>
-  <p class="fr">Le companion est destiné à votre usage personnel : lisez, lancez, modifiez
-    et réutilisez le code dans vos propres projets. Merci de ne pas redistribuer les
-    guides, les corrigés ni le dépôt privé lui-même : c’est ce qui permet de continuer à
-    l’inclure dans le prix du livre.</p>
-  <p class="en">The companion is for your personal use: read, run, modify and reuse the
-    code in your own projects. Please do not redistribute the guides, the solutions or the
-    private repository itself: that is what keeps it included in the price of the book.</p>
+  <!-- ===== Sommaire : les cinq rubriques, visibles d'un coup d'œil ======== -->
+  <nav class="sommaire" aria-label="Rubriques">
+    <a class="tuile t-recherche" href="#recherche">
+      <span class="chiffre">100+</span>
+      <span class="intitule"><span class="fr">Articles de recherche</span><span class="en">Research articles</span></span>
+      <span class="detail"><span class="fr">revues et conférences à comité de lecture</span><span class="en">peer-reviewed journals and conferences</span></span>
+    </a>
+    <a class="tuile t-livres" href="#livres">
+      <span class="chiffre">3</span>
+      <span class="intitule"><span class="fr">Livres</span><span class="en">Books</span></span>
+      <span class="detail"><span class="fr">dont deux chez Springer Nature</span><span class="en">including two with Springer Nature</span></span>
+    </a>
+    <a class="tuile t-logiciels" href="#logiciels">
+      <span class="chiffre">5</span>
+      <span class="intitule"><span class="fr">Logiciels publics</span><span class="en">Public software</span></span>
+      <span class="detail"><span class="fr">code ouvert sur GitHub</span><span class="en">open code on GitHub</span></span>
+    </a>
+    <a class="tuile t-vulgarisation" href="#vulgarisation">
+      <span class="chiffre">3</span>
+      <span class="intitule"><span class="fr">Articles de vulgarisation</span><span class="en">Outreach articles</span></span>
+      <span class="detail"><span class="fr">l’IA expliquée sans jargon</span><span class="en">AI explained without jargon</span></span>
+    </a>
+    <a class="tuile t-medias" href="#medias">
+      <span class="chiffre">3</span>
+      <span class="intitule"><span class="fr">Entretiens et médias</span><span class="en">Interviews and media</span></span>
+      <span class="detail"><span class="fr">presse, télévision, podcast</span><span class="en">press, television, podcast</span></span>
+    </a>
+  </nav>
 
-  <p class="note fr">Vos données. Votre identifiant GitHub et votre adresse e-mail servent
-    uniquement à vous envoyer l’invitation et à vous répondre. Le justificatif d’achat est
-    supprimé dès la vérification faite. Vous pouvez demander à tout moment le retrait de
-    votre accès et la suppression de ces informations, à la même adresse.</p>
-  <p class="note en">Your data. Your GitHub username and e-mail address are used only to
-    send you the invitation and to reply to you. The proof of purchase is deleted as soon as
-    it has been checked. You can ask at any time for your access to be removed and this
-    information deleted, at the same address.</p>
+  <!-- ===== Articles de recherche ========================================
+       Pour ajouter une publication : copier un bloc <li> ... </li> de la
+       liste « Publications choisies » et remplacer le texte. -->
+  <section class="section t-recherche" id="recherche">
+    <h2><span class="fr">Articles de recherche</span><span class="en">Research articles</span></h2>
+    <div class="texte">
+      <p class="fr">Traitement d’images et apprentissage automatique, appliqués à
+        l’agriculture, à la chimie et à la carte à puce : classification, clustering et
+        échantillonnage, sélection d’instances et de variables, apprentissage actif,
+        logique floue et algorithmes évolutionnaires.</p>
+      <p class="en">Image processing and machine learning, applied to agriculture, chemistry
+        and smart cards: classification, clustering and sampling, instance and feature
+        selection, active learning, fuzzy logic and evolutionary algorithms.</p>
+
+      <ul class="chiffres">
+        <li><strong>100+</strong> <span class="fr">articles à comité de lecture</span><span class="en">peer-reviewed articles</span></li>
+        <li><strong>12</strong> <span class="fr">brevets, dont 4 américains</span><span class="en">patents, 4 of them US</span></li>
+        <li><strong>7</strong> <span class="fr">thèses encadrées</span><span class="en">PhD theses supervised</span></li>
+      </ul>
+
+      <p class="encart fr">Éditeur associé d’<a href="https://www.sciencedirect.com/journal/expert-systems-with-applications"><em>Expert Systems with Applications</em></a> (Elsevier)
+        depuis 2022, pour les soumissions relevant de l’apprentissage et de l’aide à la décision.</p>
+      <p class="encart en">Associate Editor of <a href="https://www.sciencedirect.com/journal/expert-systems-with-applications"><em>Expert Systems with Applications</em></a> (Elsevier)
+        since 2022, handling submissions in machine learning and decision support.</p>
+
+      <!-- Publications choisies : à compléter. Modèle d'un bloc :
+      <ul class="liste">
+        <li>
+          <h3><a href="LIEN-DE-L-ARTICLE">Titre de l'article</a></h3>
+          <p class="meta">Revue · année</p>
+        </li>
+      </ul>
+      -->
+
+      <div class="liens-ligne">
+        <a href="https://www.researchgate.net/profile/Frederic-Ros"><span class="fr">Toutes les publications sur ResearchGate</span><span class="en">All publications on ResearchGate</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Livres =========================================================
+       Pour ajouter un livre : copier un bloc <li> ... </li> de la liste
+       ci-dessous et remplacer le texte, en français ET en anglais. -->
+  <section class="section t-livres" id="livres">
+    <h2><span class="fr">Livres</span><span class="en">Books</span></h2>
+    <div class="texte">
+
+      <div class="livre-principal">
+        <h3>De l’algorithme à la production</h3>
+        <p class="sous fr">Comprendre l’architecture des applications, du script Python aux LLM, au RAG et aux agents.</p>
+        <p class="sous en">Understanding application architecture, from a Python script to LLMs, RAG and agents (in French).</p>
+        <p class="fr">Un fil rouge, ClusterLab : un petit programme de clustering qui grandit
+          chapitre après chapitre, jusqu’à devenir une application en production. Chaque
+          technologie y est présentée comme la réponse à un problème qu’elle résout.</p>
+        <p class="en">One running example, ClusterLab: a small clustering program that grows
+          chapter after chapter into a production application. Each technology is
+          introduced as the answer to the problem it solves.</p>
+        <p class="meta fr">Broché et Kindle, à paraître. L’achat inclut l’accès au companion
+          complet : guides, labs, codes et corrigés.</p>
+        <p class="meta en">Paperback and Kindle, forthcoming. The purchase includes access to
+          the full companion: guides, labs, code and solutions.</p>
+        <div class="liens-ligne">
+          <a href="clusterlab/"><span class="fr">Le companion et son accès</span><span class="en">The companion and how to access it</span></a>
+          <!-- Quand le livre sera en vente, décommenter la ligne suivante et mettre le lien Amazon :
+          <a href="https://www.amazon.fr/dp/XXXXXXXXXX"><span class="fr">Sur Amazon</span><span class="en">On Amazon</span></a>
+          -->
+        </div>
+      </div>
+
+      <ul class="liste">
+        <li>
+          <h3 class="fr">Deux ouvrages chez Springer Nature</h3>
+          <h3 class="en">Two books with Springer Nature</h3>
+          <p class="meta fr">À paraître en 2026.</p>
+          <p class="meta en">Forthcoming, 2026.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Logiciels publics ============================================= -->
+  <section class="section t-logiciels" id="logiciels">
+    <h2><span class="fr">Logiciels publics</span><span class="en">Public software</span></h2>
+    <div class="texte">
+      <p class="fr">Le code qui accompagne les articles, publié pour que les résultats
+        puissent être vérifiés et réutilisés.</p>
+      <p class="en">The code behind the articles, published so that the results can be
+        checked and reused.</p>
+      <ul class="grille">
+        <li>
+          <h3><a href="https://github.com/frederic-ros/dualselect">DualSelect</a></h3>
+          <p class="fr">Apprentissage actif fondé sur l’instabilité structurelle des pseudo-étiquettes ; implémentation de référence et <a href="https://github.com/frederic-ros/dualselect-ablations">études d’ablation</a>.</p>
+          <p class="en">Active learning based on the structural instability of pseudo-labels; reference implementation and <a href="https://github.com/frederic-ros/dualselect-ablations">ablation studies</a>.</p>
+        </li>
+        <li>
+          <h3><a href="https://github.com/frederic-ros/Rarity-Is-Not-Difficulty">Rarity Is Not Difficulty</a></h3>
+          <p class="fr">Paquet de reproductibilité sur l’apprentissage actif des classes rares.</p>
+          <p class="en">Reproducibility package on active learning for rare classes.</p>
+        </li>
+        <li>
+          <h3><a href="https://github.com/frederic-ros/When-Does-Diversity-Help-in-Active-Learning-">When Does Diversity Help in Active Learning?</a></h3>
+          <p class="fr">Étude empirique à grande échelle sur l’apport de la diversité en apprentissage actif.</p>
+          <p class="en">A large-scale empirical study of when diversity helps in active learning.</p>
+        </li>
+        <li>
+          <h3><a href="https://github.com/frederic-ros/SupervisedClustering">Supervised Clustering</a></h3>
+          <p class="fr">Clustering supervisé, en Python.</p>
+          <p class="en">Supervised clustering, in Python.</p>
+        </li>
+        <li>
+          <h3><a href="https://github.com/frederic-ros/TP-Brick-by-Brick-Approach-to-Modern-Deep-Learning-Architectures">Brick by Brick</a></h3>
+          <p class="fr">Travaux pratiques pour comprendre les architectures modernes d’apprentissage profond, brique par brique.</p>
+          <p class="en">Hands-on notebooks to understand modern deep learning architectures, brick by brick.</p>
+        </li>
+      </ul>
+      <div class="liens-ligne">
+        <a href="https://github.com/frederic-ros"><span class="fr">Tous les dépôts sur GitHub</span><span class="en">All repositories on GitHub</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Articles de vulgarisation ======================================
+       Pour ajouter un article : copier un bloc <li> ... </li>. -->
+  <section class="section t-vulgarisation" id="vulgarisation">
+    <h2><span class="fr">Articles de vulgarisation</span><span class="en">Outreach articles</span></h2>
+    <div class="texte">
+      <p class="fr">Des articles pour expliquer l’intelligence artificielle sans jargon :
+        ce qu’elle sait faire, ce qu’elle coûte, et pourquoi elle échoue parfois. Ils sont
+        aussi publiés sur la page presse du
+        <a href="https://www.labia-loirevalley.fr/presse">LAB’IA Loire Valley</a>.</p>
+      <p class="en">Articles that explain artificial intelligence without jargon: what it can
+        do, what it costs, and why it sometimes fails. They are also published on the
+        press page of the <a href="https://www.labia-loirevalley.fr/presse">LAB’IA Loire Valley</a>
+        (in French).</p>
+
+      <ul class="liste">
+        <li>
+          <h3><a href="https://www.labia-loirevalley.fr/_files/ugd/667cf1_a7c335a322a34a048b04412aaca692c6.pdf">Histoire de l’intelligence artificielle</a></h3>
+          <p class="meta fr">Série d’articles · septembre 2026 · PDF</p>
+          <p class="meta en">Series of articles, in French · September 2026 · PDF</p>
+        </li>
+        <li>
+          <h3><a href="https://www.labia-loirevalley.fr/_files/ugd/667cf1_764ac8ee5a974c2fb21922f3dd4832d5.pdf">Pourquoi tant de projets d’intelligence artificielle peinent-ils à dépasser le stade du pilote ?</a></h3>
+          <p class="meta fr">Juin 2026 · PDF</p>
+          <p class="meta en">In French · June 2026 · PDF</p>
+        </li>
+        <li>
+          <h3><a href="https://www.labia-loirevalley.fr/_files/ugd/667cf1_fce19603811548ce81e33f0db9d3aa46.pdf">Comment une panne minuscule a révélé ce qu’une usine entière ignorait, et pourquoi les IA qu’on déploie partout aujourd’hui sont déjà des cibles</a></h3>
+          <p class="meta fr">Juin 2026 · PDF</p>
+          <p class="meta en">In French · June 2026 · PDF</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Entretiens et médias ========================================== -->
+  <section class="section t-medias" id="medias">
+    <h2><span class="fr">Entretiens et médias</span><span class="en">Interviews and media</span></h2>
+    <div class="texte">
+      <p class="en meta">In French.</p>
+      <ul class="grille">
+        <li>
+          <p class="support">La République du Centre · <span class="fr">janvier 2024</span><span class="en">January 2024</span></p>
+          <h3><a href="https://www.larep.fr/orleans-45000/actualites/lia-est-partout-mais-nappartient-qua-un-petit-monde-entretien-avec-frederic-ros-directeur-d-orleans-technopole_14432023/">« L’IA est partout, mais n’appartient qu’à un petit monde »</a></h3>
+        </li>
+        <li>
+          <p class="support">France 3 Centre-Val de Loire · <span class="fr">février 2025</span><span class="en">February 2025</span></p>
+          <h3><a href="https://france3-regions.francetvinfo.fr/centre-val-de-loire/loiret/orleans/ia-pour-reussir-la-3e-revolution-industrielle-et-technologique-la-france-a-t-elle-la-capacite-d-alimenter-en-energie-la-multiplication-des-data-centers-3107137.html">IA : la France a-t-elle la capacité d’alimenter en énergie la multiplication des data centers ?</a></h3>
+        </li>
+        <li>
+          <p class="support">Podcast · <span class="fr">janvier 2024</span><span class="en">January 2024</span></p>
+          <h3><a href="https://podcast.ausha.co/paroles-de-giennois/frederic-ros-directeur-du-technopole-d-orleans">Paroles de Giennois</a></h3>
+        </li>
+      </ul>
+      <div class="liens-ligne">
+        <a href="https://www.labia-loirevalley.fr/presse"><span class="fr">Toute la revue de presse du LAB’IA</span><span class="en">The full LAB’IA press page</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ====================================================== -->
+  <section class="section t-contact" id="contact">
+    <h2>Contact</h2>
+    <div class="texte">
+      <p class="fr">Pour une question sur un livre, une demande d’accès au companion, une
+        intervention ou une collaboration : <a href="mailto:contact@frederic-ros.com">contact@frederic-ros.com</a>.</p>
+      <p class="en">For a question about a book, access to the companion, a talk or a
+        collaboration: <a href="mailto:contact@frederic-ros.com">contact@frederic-ros.com</a>.</p>
+      <ul class="reseaux">
+        <li><a href="https://www.linkedin.com/in/fr%C3%A9d%C3%A9ric-ros-6837826/">LinkedIn</a></li>
+        <li><a href="https://www.researchgate.net/profile/Frederic-Ros">ResearchGate</a></li>
+        <li><a href="https://github.com/frederic-ros">GitHub</a></li>
+        <li><a href="https://www.labia-loirevalley.fr/">LAB’IA Loire Valley</a></li>
+        <li><a href="https://www.tech-orleans.fr/">Technopole Orléans Val de Loire</a></li>
+      </ul>
+    </div>
+  </section>
+
 </main>
 
 <footer class="pied">
