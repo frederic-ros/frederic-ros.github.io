@@ -160,12 +160,12 @@ h3.sous-titre { font-size: 1rem; font-weight: 600; margin: 2.2rem 0 0.8rem; colo
 .tuile {
   display: flex; flex-direction: column; gap: 0.2rem; text-decoration: none; color: var(--encre);
   background: var(--fond-carte); border-top: 3px solid var(--accent);
-  padding: 1rem 1rem 1.1rem; border-radius: 0 0 6px 6px;
+  padding: 1.1rem 1rem 1.2rem; border-radius: 0 0 6px 6px; gap: 0.35rem;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 .tuile:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
 .tuile .chiffre { font-size: 2rem; line-height: 1.1; font-weight: 500; color: var(--accent); }
-.tuile .intitule { font-family: var(--sans); font-weight: 600; font-size: 0.98rem; line-height: 1.3; }
+.tuile .intitule { font-family: var(--serif); font-weight: 600; font-size: 1.12rem; line-height: 1.3; color: var(--accent); }
 .tuile .detail { font-family: var(--sans); font-size: 0.82rem; color: var(--gris); line-height: 1.35; }
 @media (max-width: 960px) { .sommaire { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .sommaire { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
